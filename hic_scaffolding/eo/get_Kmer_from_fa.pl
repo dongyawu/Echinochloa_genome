@@ -13,7 +13,7 @@ while(<IN>){
 		while(<IN>){
 			chomp;
 			$seq = $_;
-			$num = length($seq)-100;
+			$num = length($seq)-$ARGV[1];
 			foreach $i (0..$num){
 				print OUT ">".$seq_num."_".$i."\n";
 				print OUT substr($seq,$i,$ARGV[1])."\n";
